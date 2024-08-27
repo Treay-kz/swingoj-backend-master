@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3c261867-22c0-4884-898f-897e0c737062" name="Changes" comment="单体项目" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Treay-kz&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Treay-kz/Swing-OJ.git&quot;,
+    &quot;accountId&quot;: &quot;55b2148f-11d5-4b19-b6b5-fae4bb466297&quot;
+  }
+}</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2gX4shju3IzSx2aZRUERsMBirUr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CodeGenerator.executor": "Run",
+    "Application.MQInitMain.executor": "Run",
+    "JUnit.CodeSandboxTest.executeCode.executor": "Run",
+    "JUnit.CodeSandboxTest.executeCodeByProxy.executor": "Debug",
+    "JUnit.MqTest.sendMessage.executor": "Run",
+    "Maven.swingoj [clean].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.MainApplication (1).executor": "Run",
+    "Spring Boot.MainApplication.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/XQProjects/swingoj-backend-master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.scopes",
+    "spring.configuration.checksum": "59c75d1239d055ffe057d293fe1a431c",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\XQProjects\codeeval-backend-master\src\test\java\com\treay\codeeval" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.treay.codeeval.service" />
+      <recent name="com.treay.codeeval.mapper" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.treay.codeeval.model.enums" />
+      <recent name="com.treay.codeeval.controller" />
+      <recent name="com.treay.codeeval.model.dto.question" />
+      <recent name="com.treay.codeeval.model.vo" />
+      <recent name="com.treay.codeeval.service" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.MainApplication">
+    <configuration name="CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.treay.codeeval.generate.CodeGenerator" />
+      <module name="codeeval" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.treay.swingoj.generate.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MQInitMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.treay.swingoj.rabbitMQ.MQInitMain" />
+      <module name="codeeval" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.treay.swingoj.rabbitMQ.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CodeSandboxTest.executeCode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="codeeval" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.treay.swingoj.judge.codesandbox.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.treay.codeeval.judge.codesandbox" />
+      <option name="MAIN_CLASS_NAME" value="com.treay.codeeval.judge.codesandbox.CodeSandboxTest" />
+      <option name="METHOD_NAME" value="executeCode" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CodeSandboxTest.executeCodeByProxy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="codeeval" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.treay.swingoj.judge.codesandbox.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.treay.codeeval.judge.codesandbox" />
+      <option name="MAIN_CLASS_NAME" value="com.treay.codeeval.judge.codesandbox.CodeSandboxTest" />
+      <option name="METHOD_NAME" value="executeCodeByProxy" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MqTest.sendMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="codeeval" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.treay.swingoj.mq.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.treay.codeeval.mq" />
+      <option name="MAIN_CLASS_NAME" value="com.treay.swingoj.mq.MqTest" />
+      <option name="METHOD_NAME" value="sendMessage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="swingoj" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.treay.swingoj.MainApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="codeeval" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.treay.swingoj.MainApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MQInitMain" />
+        <item itemvalue="JUnit.MqTest.sendMessage" />
+        <item itemvalue="JUnit.CodeSandboxTest.executeCodeByProxy" />
+        <item itemvalue="JUnit.CodeSandboxTest.executeCode" />
+        <item itemvalue="Application.CodeGenerator" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17890.1" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17890.1" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3c261867-22c0-4884-898f-897e0c737062" name="Changes" comment="" />
+      <created>1715830797090</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715830797090</updated>
+      <workItem from="1715830798666" duration="138000" />
+      <workItem from="1715927871247" duration="1019000" />
+      <workItem from="1715929074085" duration="3528000" />
+      <workItem from="1715938672214" duration="4000" />
+      <workItem from="1715939031367" duration="134000" />
+      <workItem from="1715940452206" duration="20000" />
+      <workItem from="1716340988594" duration="17000" />
+      <workItem from="1716710174408" duration="1741000" />
+      <workItem from="1717332581756" duration="949000" />
+      <workItem from="1717465268533" duration="1448000" />
+      <workItem from="1717472483886" duration="3037000" />
+      <workItem from="1717486891461" duration="6000" />
+      <workItem from="1717486988339" duration="1486000" />
+      <workItem from="1717548012859" duration="774000" />
+      <workItem from="1717584418620" duration="21000" />
+      <workItem from="1717676537258" duration="13000" />
+      <workItem from="1718970539448" duration="447000" />
+      <workItem from="1719023440306" duration="3906000" />
+      <workItem from="1721874265367" duration="48000" />
+      <workItem from="1721958961956" duration="3685000" />
+      <workItem from="1721968260217" duration="2172000" />
+      <workItem from="1722055857975" duration="134000" />
+      <workItem from="1722056457287" duration="3110000" />
+      <workItem from="1722066387241" duration="6242000" />
+      <workItem from="1722074218043" duration="559000" />
+      <workItem from="1722079881704" duration="3486000" />
+      <workItem from="1722084894528" duration="2620000" />
+      <workItem from="1722127697379" duration="320000" />
+      <workItem from="1722130889127" duration="1406000" />
+      <workItem from="1722132802498" duration="1970000" />
+      <workItem from="1722135942287" duration="1686000" />
+      <workItem from="1722143226458" duration="1935000" />
+      <workItem from="1722146175723" duration="92000" />
+      <workItem from="1722218408027" duration="1257000" />
+      <workItem from="1722229918346" duration="2551000" />
+      <workItem from="1722263125722" duration="421000" />
+      <workItem from="1722333929412" duration="135000" />
+      <workItem from="1722516112512" duration="647000" />
+      <workItem from="1722517162690" duration="2372000" />
+      <workItem from="1722559902340" duration="6296000" />
+      <workItem from="1722567240550" duration="1591000" />
+      <workItem from="1722571417931" duration="988000" />
+      <workItem from="1722577980266" duration="3924000" />
+      <workItem from="1723379114425" duration="665000" />
+      <workItem from="1723447153269" duration="14000" />
+      <workItem from="1724643093969" duration="174000" />
+      <workItem from="1724647794386" duration="446000" />
+      <workItem from="1724659352877" duration="1951000" />
+      <workItem from="1724667947906" duration="78000" />
+      <workItem from="1724668889603" duration="25000" />
+      <workItem from="1724676563563" duration="815000" />
+      <workItem from="1724721054731" duration="579000" />
+      <workItem from="1724721644517" duration="36000" />
+      <workItem from="1724721698177" duration="125000" />
+      <workItem from="1724721828182" duration="58000" />
+      <workItem from="1724721889595" duration="206000" />
+    </task>
+    <task id="LOCAL-00001" summary="初始化">
+      <option name="closed" value="true" />
+      <created>1722056948625</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1722056948625</updated>
+    </task>
+    <task id="LOCAL-00002" summary="初始化">
+      <option name="closed" value="true" />
+      <created>1722087515739</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1722087515739</updated>
+    </task>
+    <task id="LOCAL-00003" summary="初始化">
+      <option name="closed" value="true" />
+      <created>1722127724203</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1722127724203</updated>
+    </task>
+    <task id="LOCAL-00004" summary="单体项目">
+      <option name="closed" value="true" />
+      <created>1724676777073</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1724676777073</updated>
+    </task>
+    <task id="LOCAL-00005" summary="单体项目">
+      <option name="closed" value="true" />
+      <created>1724676872916</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1724676872916</updated>
+    </task>
+    <task id="LOCAL-00006" summary="单体项目">
+      <option name="closed" value="true" />
+      <created>1724676924071</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1724676924071</updated>
+    </task>
+    <task id="LOCAL-00007" summary="单体项目">
+      <option name="closed" value="true" />
+      <created>1724677070121</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1724677070121</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="初始化" />
+    <MESSAGE value="单体项目" />
+    <option name="LAST_COMMIT_MESSAGE" value="单体项目" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/treay/swingoj/judge/service/Impl/JudgeServiceImpl.java</url>
+          <line>91</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/treay/swingoj/judge/JudgeManager.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/treay/swingoj/judge/strategy/DefaultJudgeStrategy.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/treay/swingoj/judge/strategy/DefaultJudgeStrategy.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/treay/swingoj/judge/strategy/JudgeStrategy.java</url>
+          <line>14</line>
+          <properties class="com.treay.swingoj.judge.strategy.JudgeStrategy" method="doJudge">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
