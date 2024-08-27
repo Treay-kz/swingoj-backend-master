@@ -1,40 +1,148 @@
-# SpringBoot 项目初始模板
+<center>
+
+# Swing Online Judge
+
+![logo.png](\readme-images\logo.png)
+
+<div style="display: flex; justify-content: center;">
+    <img src="https://img.shields.io/badge/Gson-3.9.1-blue.svg" alt="Gson">
+    <img src="https://img.shields.io/badge/Hutool-5.8.8-green.svg" alt="Hutool">
+    <img src="https://img.shields.io/badge/MyBatis-2.2.2-yellow.svg" alt="MyBatis">
+</div>
+
+<div>
+    <img src="https://img.shields.io/badge/Spring Cloud-2021.0.5-blue.svg" alt="Spring Cloud">
+    <img src="https://img.shields.io/badge/JWT-0.9.1-orange.svg" alt="JWT">
+    <img src="https://img.shields.io/badge/MySQL-8.0.20-orange.svg" alt="MySQL">
+    <img src="https://img.shields.io/badge/Java-1.8.0__371-blue.svg" alt="Java">
+</div>
+
+<div>
+    <img src="https://img.shields.io/badge/Redis-5.0.14-red.svg" alt="Redis">
+    <img src="https://img.shields.io/badge/RabbitMQ-3.9.11-orange.svg" alt="RabbitMQ">
+    <img src="https://img.shields.io/badge/Spring Boot-2.7.2-brightgreen.svg" alt="Spring Boot">
+    <img src="https://img.shields.io/badge/MyBatis--Plus-3.5.2-blue.svg" alt="MyBatis-Plus">
+    <img src="https://img.shields.io/badge/Redisson-3.21.3-yellow.svg" alt="Redisson">
+</div>
+
+</center>
+
+> 作者：[Treay](https://github.com/Treay-kz)
+
+## 项目介绍
+
+本项目是基于 Spring Boot + Spring Cloud Alibaba 微服务 + Docker + RabbitMQ + Vue 3 的 **编程算法题目在线评测系统**
+（简称OJ）。
+
+> 源项目来自编程导航（https://yupi.icu）
 
 
-基于 Java SpringBoot 的项目初始模板，整合了常用框架和主流业务的示例代码。
+Swing OJ（Swing Online Judge）系统是一个在线算法评测系统，用户可以选择题目、编写代码并提交代码进行评测，而且是高效、稳定的 OJ
+在线判题评测系统，它能够根据用户提交的代码、出题人预先设置的题目输入和输出用例，进行编译代码、运行代码、判断代码运行结果是否正确。
 
-只需 1 分钟即可完成内容网站的后端！！！大家还可以在此基础上快速开发自己的项目。
+## 项目功能 
+
+### 题目模块
+
+1. 创建题目（管理员）
+2. 删除题目（管理员）
+3. 修改题目（管理员）
+4. 搜索题目（用户/管理员）
+5. 题目管理（管理员）
+6. 在线做题（用户/管理）
+7. 提交题目代码（用户/管理）
+8. 消息队列：防止判题服务执行时间过长，并使用死信队列处理判题失败的题目，避免消息积压。
+
+### 用户模块
+
+1. 注册
+2. 登录，在微服务中使用JWT Token实现登录，在网关层面获取token登录消息，实现用户鉴权
+3. 用户管理（管理员）
+4. 用户上传头像功能，使用阿里云对象存储OSS存储图片
+5. 用户限流。本项目使用到令牌桶限流算法，使用Redisson实现简单且高效分布式限流，限制用户每秒只能调用一次提交一次题目，防止用户恶意占用系统资源
+
+### 判题模块
+
+1. 提交判题：结果是否正确与错误
+2. 错误处理：内存益出、安全性、超时
+3. 代码沙箱：执行代码，返回执行信息
+4. 开放接口：提供一个独立的新服务
+
+### 代码沙箱
+- 只负责接受代码和输入，运行代码，返回编译运行的结果，(不负责判题)
+
+## 项目核心亮点 ⭐
+
+1. 权限校验：用户权限校验
+2. 代码沙箱（安全沙箱）
+    - 沙箱：隔离的、安全的环境，用户的代码不会影响到沙箱之外的系统的运行
+    - 资源分配：限制用户程序的占用资源
+    - 安全性：防止用户代码攻击沙箱（代码藏毒、删除文件等）
+3. 判题规则
+    - 题目用例的比对，结果的验证
+4. 任务调度（消息队列执行判题）
+    - 服务器资源有限，用户要排队，按照顺序去依次执行判题
+
+## 快速启动 
+
+1. 下载/拉取本项目到本地（swingoj-backend-master/swingoj-backend-mircoservice、swingoj-code-sandbox、swingoj-frontend）
+2. 通过 IDEA 代码编辑器进行打开项目，等待依赖的下载
+3. 修改配置文件 `application.yaml` 的信息，比如数据库、Redis、RabbitMQ等
+4. 修改信息完成后，通过 `SwingOJApplication` 程序进行运行项目
+
+## 项目结构图 
+
+![项目结构图](\readme-images\README-500.png)
+
+## 项目核心业务流程 🔥
+
+判题服务：获取题目信息、预计的输入输出结果，返回给主业务后端：用户的答案是否正确
+代码沙箱：只负责运行代码，给出程序运行的结果，不用管用户提交的程序是否正确。 因此 判题服务 和 代码沙箱 实现了解耦
+核心流程时序图
+## 微服务项目
+
+### 服务模块划分
+
+1. shieroj-backend-common：系统通用模块，比如用户角色权限校验，异常处理，统一返回值，常量，工具类等
+2. shieroj-backend-file-service：系统文件模块，比如用户头像上传等
+3. shieroj-backend-gateway：系统网关模块：实现了给前端返回统一接口路由，聚合文档（Knife4j），全局跨域配置，权限校验（JWT Token）等
+4. shieroj-backend-judge-service：系统判题模块：调用远程代码沙箱接口，实现工厂模式、策略模式、代理模式，验证代码沙箱执行结果是否正确与错误，使用消息队列实现异步处理消息
+5. shieroj-backend-model：系统实体模块，比如用户实体类、题目实体类，VO、枚举等
+6. shieroj-backend-question-service：系统题目模块：题目的增删改查、题目提交限流、使用消息队列异步处理消息
+7. shieroj-backend-service-client：系统内部调用模块，给内部系统提供调用接口
+8. shieroj-backend-user-service：系统用户模块，管理员对用户的增删改查，用户自己信息查询，修改，头像上传。
+
+## 项目技术栈和特点
+
+### 后端
+
+1. Spring Boot：简化Spring开发框架
+2. Spring MVC：
+3. Spring Boot 调试工具和项目处理器
+4. Spring AOP 切面编程
+5. Spring 事务注解
+6. Spring Cloud Alibaba
+7. Spring Gateway
+8. MyBatis + MyBatis Plus 数据访问（开启分页）
+9. MyBatis-Plus 数据库访问结构
+10. Redis：分布式存储用户信息
+11. Redisson：限流控制
+12. JWT Token：用户鉴权
+13. RabbitMQ：消息队列
+14. Docker 代码沙箱，实现隔离环境运行Java程序
+15. Java安全管理器：保护 JVM、Java 安全的机制，实现对资源的操作限制
+16. Nacos：服务注册管理中心
+17. OpenFeign：微服务模块之间调用
 
 
-## 模板特点
-
-### 主流框架 & 特性
-
-- Spring Boot 2.7.x（贼新）
-- Spring MVC
-- MyBatis + MyBatis Plus 数据访问（开启分页）
-- Spring Boot 调试工具和项目处理器
-- Spring AOP 切面编程
-- Spring Scheduler 定时任务
-- Spring 事务注解
 
 ### 数据存储
 
 - MySQL 数据库
-- Redis 内存数据库
-- Elasticsearch 搜索引擎
-- 腾讯云 COS 对象存储
+- 阿里云 OSS 对象存储
 
-### 工具类
+### 通用特性
 
-- Easy Excel 表格处理
-- Hutool 工具库
-- Apache Commons Lang3 工具类
-- Lombok 注解
-
-### 业务特性
-
-- 业务代码生成器（支持自动生成 Service、Controller、数据模型代码）
 - Spring Session Redis 分布式登录
 - 全局请求响应拦截器（记录日志）
 - 全局异常处理器
@@ -45,132 +153,68 @@
 - 全局跨域处理
 - 长整数丢失精度解决
 - 多环境配置
-
-
-## 业务功能
-
-- 提供示例 SQL（用户、帖子、帖子点赞、帖子收藏表）
-- 用户登录、注册、注销、更新、检索、权限管理
-- 帖子创建、删除、编辑、更新、数据库检索、ES 灵活检索
-- 帖子点赞、取消点赞
-- 帖子收藏、取消收藏、检索已收藏帖子
-- 帖子全量同步 ES、增量同步 ES 定时任务
-- 支持微信开放平台登录
-- 支持微信公众号订阅、收发消息、设置菜单
-- 支持分业务的文件上传
+- IDEA插件 MyBatisX ： 根据数据库表自动生成
+- Hutool工具库 、Apache Common Utils、Gson 解析库、Lombok 注解
 
 ### 单元测试
 
-- JUnit5 单元测试
-- 示例单元测试类
+- JUnit5 单元测试、业务功能单元测试
 
-### 架构设计
+### 设计模式
 
-- 合理分层
+- 静态工厂模式
+- 代理模式
+- 策略模式
+- 模板方法模式
 
+### 远程开发
 
-## 快速上手
-
-
-### MySQL 数据库
-
-1）修改 `application.yml` 的数据库配置为你自己的：
-
-```yml
-spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/my_db
-    username: root
-    password: 123456
-```
-
-2）执行 `sql/create_table.sql` 中的数据库语句，自动创建库表
-
-3）启动项目，访问 `http://localhost:8101/api/doc.html` 即可打开接口文档，不需要写前端就能在线调试接口了~
+- VMware Workstation虚拟机
+- CentOS 8
+- Docker环境
+- 使用JetBrains Client连接
 
 
-### Redis 分布式登录
+## 项目展示
 
-1）修改 `application.yml` 的 Redis 配置为你自己的：
+### 项目首页
 
-```yml
-spring:
-  redis:
-    database: 1
-    host: localhost
-    port: 6379
-    timeout: 5000
-    password: 123456
-```
+![首页](\readme-images\README-000.png)
 
-2）修改 `application.yml` 中的 session 存储方式：
+### 用户登录注册
 
-```yml
-spring:
-  session:
-    store-type: redis
-```
+![用户注册](\readme-images\README-201.png)
+![用户登录](\readme-images\README-200.png)
 
-3）移除 `MainApplication` 类开头 `@SpringBootApplication` 注解内的 exclude 参数：
+### 管理员创建题目
 
-修改前：
+![创建题目](\readme-images\README-100.png)
 
-```java
-@SpringBootApplication(exclude = {RedisAutoConfiguration.class})
-```
+### 题目管理
 
-修改后：
+![题目管理](\readme-images\README-101.png)
 
 
-```java
-@SpringBootApplication
-```
+### 用户管理（管理员）
 
-### Elasticsearch 搜索引擎
+![用户管理](\readme-images\README-204.png)
 
-1）修改 `application.yml` 的 Elasticsearch 配置为你自己的：
 
-```yml
-spring:
-  elasticsearch:
-    uris: http://localhost:9200
-    username: root
-    password: 123456
-```
+### 个人信息
 
-2）复制 `sql/post_es_mapping.json` 文件中的内容，通过调用 Elasticsearch 的接口或者 Kibana Dev Tools 来创建索引（相当于数据库建表）
+![个人信息](\readme-images\README-203.png)
 
-```
-PUT post_v1
-{
- 参数见 sql/post_es_mapping.json 文件
-}
-```
+### 提交代码
 
-这步不会操作的话需要补充下 Elasticsearch 的知识，或者自行百度一下~
+![提交代码](\readme-images\README-103.png)
 
-3）开启同步任务，将数据库的帖子同步到 Elasticsearch
 
-找到 job 目录下的 `FullSyncPostToEs` 和 `IncSyncPostToEs` 文件，取消掉 `@Component` 注解的注释，再次执行程序即可触发同步：
+### 提交题目展示
 
-```java
-// todo 取消注释开启任务
-//@Component
-```
+![提交题目展示](\readme-images\README-102.png)
 
-### 业务代码生成器
 
-支持自动生成 Service、Controller、数据模型代码，配合 MyBatisX 插件，可以快速开发增删改查等实用基础功能。
+## 后续项目扩展
 
-找到 `generate.CodeGenerator` 类，修改生成参数和生成路径，并且支持注释掉不需要的生成逻辑，然后运行即可。
+- 多语言代码沙箱
 
-```
-// 指定生成参数
-String packageName = "com.treay.swingoj";
-String dataName = "用户评论";
-String dataKey = "userComment";
-String upperDataKey = "UserComment";
-```
-
-生成代码后，可以移动到实际项目中，并且按照 `// todo` 注释的提示来针对自己的业务需求进行修改。
