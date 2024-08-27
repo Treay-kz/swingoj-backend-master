@@ -2,7 +2,7 @@
 
 # Swing Online Judge
 
-![logo.png](\readme-images\logo.png)
+![logo.png](https://f5c98967.cloudflare-imgbed-5yc.pages.dev/file/bf24d0dffe8ae4db9cb7d.png)
 
 <div style="display: flex; justify-content: center;">
     <img src="https://img.shields.io/badge/Gson-3.9.1-blue.svg" alt="Gson">
