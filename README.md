@@ -2,7 +2,7 @@
 
 # Swing Online Judge
 
-![logo.png](\readme-images\logo.png)
+![logo.png](https://f5c98967.cloudflare-imgbed-5yc.pages.dev/file/bf24d0dffe8ae4db9cb7d.png)
 
 <div style="display: flex; justify-content: center;">
     <img src="https://img.shields.io/badge/Gson-3.9.1-blue.svg" alt="Gson">
@@ -92,13 +92,14 @@ Swing OJ（Swing Online Judge）系统是一个在线算法评测系统，用户
 
 ## 项目结构图 
 
-![项目结构图](\readme-images\README-500.png)
+![项目结构图](https://f5c98967.cloudflare-imgbed-5yc.pages.dev/file/aac66054313634b80e04a.png)
 
 ## 项目核心业务流程 🔥
 
 判题服务：获取题目信息、预计的输入输出结果，返回给主业务后端：用户的答案是否正确
 代码沙箱：只负责运行代码，给出程序运行的结果，不用管用户提交的程序是否正确。 因此 判题服务 和 代码沙箱 实现了解耦
 核心流程时序图
+![核心流程时序图](https://f5c98967.cloudflare-imgbed-5yc.pages.dev/file/63cb272caa12904280865.png)
 ## 微服务项目
 
 ### 服务模块划分
@@ -179,39 +180,39 @@ Swing OJ（Swing Online Judge）系统是一个在线算法评测系统，用户
 
 ### 项目首页
 
-![首页](\readme-images\README-000.png)
+![首页](https://f5c98967.cloudflare-imgbed-5yc.pages.dev/file/e073518829d7215779f3e.png)
 
 ### 用户登录注册
 
-![用户注册](\readme-images\README-201.png)
-![用户登录](\readme-images\README-200.png)
+![用户注册](https://f5c98967.cloudflare-imgbed-5yc.pages.dev/file/549b06093217e0fef2d75.png)
+![用户登录](https://f5c98967.cloudflare-imgbed-5yc.pages.dev/file/86be1502014e8ecde0161.png)
 
 ### 管理员创建题目
 
-![创建题目](\readme-images\README-100.png)
+![创建题目](https://f5c98967.cloudflare-imgbed-5yc.pages.dev/file/d8d411000110e4cb1be41.png)
 
 ### 题目管理
 
-![题目管理](\readme-images\README-101.png)
+![题目管理](https://f5c98967.cloudflare-imgbed-5yc.pages.dev/file/b1020a17a86512b38b45b.png)
 
 
 ### 用户管理（管理员）
 
-![用户管理](\readme-images\README-204.png)
+![用户管理](https://f5c98967.cloudflare-imgbed-5yc.pages.dev/file/f317bddb13c62debee017.png)
 
 
 ### 个人信息
 
-![个人信息](\readme-images\README-203.png)
+![个人信息](https://f5c98967.cloudflare-imgbed-5yc.pages.dev/file/9692fa73b7d3c9815396d.png)
 
 ### 提交代码
 
-![提交代码](\readme-images\README-103.png)
+![提交代码](https://f5c98967.cloudflare-imgbed-5yc.pages.dev/file/549b06093217e0fef2d75.png)
 
 
 ### 提交题目展示
 
-![提交题目展示](\readme-images\README-102.png)
+![提交题目展示](https://f5c98967.cloudflare-imgbed-5yc.pages.dev/file/2183c8f591deabb734be3.png)
 
 
 ## 后续项目扩展
